@@ -31,7 +31,7 @@
 					<tr class="table-light">
 						<td><%=articoloItem.getMarca()%></td>
 						<td><%=articoloItem.getModello()%></td>
-						<td><a
+						<td style="text-align: center"><a
 							href="VisualizzaDettaglioServlet?idDaInviareComeParametro=<%=articoloItem.getIdArticolo()%>">Dettaglio</a>
 							<a
 							href="PreparaModificaServlet?idDaInviareComeParametro=<%=articoloItem.getIdArticolo()%>">Modifica</a>
