@@ -71,7 +71,10 @@ html, body {
 			</form>
 		</div>
 	</div>
-	<!-- 	<a href="PreparaAggiuntaServlet">Nuovo articolo</a> -->
+				<div class="text-center">
+	<a href="PreparaAggiuntaServlet" class="btn btn-warning btn-lg"
+			role="button" aria-pressed="true" style="margin-top: 100px">Crea nuovo</a>
+	</div>
 
 
 </body>

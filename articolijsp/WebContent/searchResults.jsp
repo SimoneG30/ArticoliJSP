@@ -51,9 +51,28 @@ html, body {
 </head>
 <body
 	style="font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;">
+
+
+	<%
+	List<Articolo> listaDaServlet = (List<Articolo>) request.getAttribute("listaArticoliAttribute");
+
+	if (listaDaServlet.isEmpty()) {
+	%>
+	<div class="text-center">
+		<h3 style="padding-top: 50px">Nessun articolo trovato</h3>
+		<h5 style="padding-top: 50px">Vuoi cercare altro?</h5>
+		<br> <a href="searchArticolo.jsp" class="btn btn-primary"
+			role="button" aria-pressed="true">Clicca qui</a>
+	</div>
+
+	<%
+	} else {
+	%>
 	<div class="container" style="max-width: 540px">
+	<h3 style="text-align: center; padding-top: 50px">Articoli trovati: </h3>
 		<div class="d-flex align-items-center justify-content-center"
 			style="margin-top: 50px">
+			
 			<table class="table table-bordered">
 				<thead class="thead-light">
 					<tr>
@@ -64,7 +83,6 @@ html, body {
 				</thead>
 				<tbody>
 					<%
-					List<Articolo> listaDaServlet = (List<Articolo>) request.getAttribute("listaArticoliAttribute");
 					for (Articolo articoloItem : listaDaServlet) {
 					%>
 					<tr class="table-light">
@@ -80,12 +98,16 @@ html, body {
 					</tr>
 					<%
 					}
+					}
 					%>
 				</tbody>
 			</table>
 
 		</div>
-		<a href="PreparaAggiuntaServlet">Nuovo Articolo</a>
+			<div class="text-center">
+	<a href="PreparaAggiuntaServlet" class="btn btn-warning btn-lg"
+			role="button" aria-pressed="true" style="margin-top: 150px">Crea nuovo</a>
+	</div>
 
 	</div>
 </body>

@@ -67,6 +67,7 @@ table, th, td {
 
 
 <div class="container" style="max-width: 540px">
+<h3 style="text-align: center; padding-top: 50px">Dettagli articolo selezionato</h3>
 		<div class="d-flex align-items-center justify-content-center"
 			style="margin-top: 50px">
 			<table class="table table-bordered">
