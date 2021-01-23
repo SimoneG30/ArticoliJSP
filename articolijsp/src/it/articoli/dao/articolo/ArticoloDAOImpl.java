@@ -2,6 +2,7 @@ package it.articoli.dao.articolo;
 
 import java.sql.Connection;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import it.articoli.dao.DB_Mock;
@@ -69,11 +70,16 @@ public class ArticoloDAOImpl implements ArticoloDAO {
 
 	@Override
 	public int delete(Articolo input) throws Exception {
+		
+		Iterator<Articolo> iteratoreLista = DB_Mock.LISTA_ARTICOLI.iterator();
 
-		for (Articolo articoloItem : DB_Mock.LISTA_ARTICOLI) {
-			if (articoloItem.getIdArticolo().equals(input.getIdArticolo()))
-				DB_Mock.LISTA_ARTICOLI.remove(input);
+		while (iteratoreLista.hasNext()) {
+		    Articolo articoloEstratto = iteratoreLista.next();
+
+		    if (articoloEstratto.getIdArticolo().equals(input.getIdArticolo()))
+		    	iteratoreLista.remove();
 		}
+		
 		return 1;
 	}
 

@@ -15,6 +15,10 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
 <style>
 body {
 	background: #EECDA3;
@@ -68,17 +72,26 @@ html, body {
 	<%
 	} else {
 	%>
+	<a href="javascript:history.back()" class="btn btn-light" role="button"
+		aria-pressed="true"
+		style="float: right; margin-top: 20px; margin-right: 20px">Torna
+		indietro</a>
 	<div class="container" style="max-width: 540px">
-	<h3 style="text-align: center; padding-top: 50px">Articoli trovati: </h3>
+		<h3 style="text-align: center; padding-top: 50px">Articoli
+			trovati:</h3>
+
 		<div class="d-flex align-items-center justify-content-center"
 			style="margin-top: 50px">
-			
+
 			<table class="table table-bordered">
 				<thead class="thead-light">
 					<tr>
 						<th scope="col">Marca</th>
 						<th scope="col">Modello</th>
-						<th scope="col" style="text-align: center">Azioni</th>
+						<th scope="col" style="text-align: center">Azioni <a
+							href="PreparaAggiuntaServlet"> <i class="fa fa-plus fa-lg"
+								style="float: right;" title="Nuovo articolo"></i></a>
+						</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -88,11 +101,12 @@ html, body {
 					<tr class="table-light">
 						<td><%=articoloItem.getMarca()%></td>
 						<td><%=articoloItem.getModello()%></td>
-						<td style="text-align: center"><a
+						<td style="text-align: center"><i class="fa fa-info-circle"></i>
+							<a style="padding-right: 10px"
 							href="VisualizzaDettaglioServlet?idDaInviareComeParametro=<%=articoloItem.getIdArticolo()%>">Dettaglio</a>
-							<a
+							<i class="fa fa-edit"></i> <a style="padding-right: 10px"
 							href="PreparaModificaServlet?idDaInviareComeParametro=<%=articoloItem.getIdArticolo()%>">Modifica</a>
-							<a
+							<i class="fa fa-trash"></i> <a
 							href="PreparaRimozioneServlet?idDaInviareComeParametro=<%=articoloItem.getIdArticolo()%>">Rimuovi</a>
 						</td>
 					</tr>
@@ -102,13 +116,7 @@ html, body {
 					%>
 				</tbody>
 			</table>
-
 		</div>
-			<div class="text-center">
-	<a href="PreparaAggiuntaServlet" class="btn btn-warning btn-lg"
-			role="button" aria-pressed="true" style="margin-top: 150px">Crea nuovo</a>
-	</div>
-
 	</div>
 </body>
 </html>

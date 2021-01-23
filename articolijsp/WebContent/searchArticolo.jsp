@@ -72,10 +72,46 @@ html, body {
 		</div>
 	</div>
 				<div class="text-center">
+				
+						<%
+		if (request.getAttribute("messaggioDiErrore") != null) {
+		%>
+		<h4><p style="color: Navy;"><%=request.getAttribute("messaggioDiErrore")%></p></h4>
+		<%
+		}
+		%>
+		<%
+		if (request.getAttribute("updateRiuscito") != null) {
+		%>
+		<h4><p style="color: Navy;"><%=request.getAttribute("updateRiuscito")%></p></h4>
+		<%
+		}
+		%>
+		<%
+		if (request.getAttribute("rimozioneRiuscita") != null) {
+		%>
+		<h4><p style="color: Navy;"><%=request.getAttribute("rimozioneRiuscita")%></p></h4>
+		<%
+		}
+		%>
+		<%
+		if (request.getAttribute("aggiuntaRiuscita") != null) {
+		%>
+		<h4><p style="color: Navy;"><%=request.getAttribute("aggiuntaRiuscita")%></p></h4>
+		<%
+		}
+		%>
+				
+				
 	<a href="PreparaAggiuntaServlet" class="btn btn-warning btn-lg"
 			role="button" aria-pressed="true" style="margin-top: 100px">Crea nuovo</a>
 	</div>
 
-
+		
+		
+		
+		
+		
+		
 </body>
 </html>

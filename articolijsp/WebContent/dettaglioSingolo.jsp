@@ -65,6 +65,7 @@ table, th, td {
 </head>
 <body style = "font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;">
 
+	<a href="javascript:history.back()" class="btn btn-light"  role="button" aria-pressed="true"  style="float: right;margin-top:20px;margin-right:20px">Torna indietro</a>
 
 <div class="container" style="max-width: 540px">
 <h3 style="text-align: center; padding-top: 50px">Dettagli articolo selezionato</h3>

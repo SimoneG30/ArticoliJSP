@@ -66,6 +66,8 @@ th, td {
 </head>
 <body
 	style="font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;">
+		<a href="javascript:history.back()" class="btn btn-light"  role="button" aria-pressed="true"  style="float: right;margin-top:20px;margin-right:20px">Torna indietro</a>
+	
 	<h1 style="color: red; text-align: center; padding-top: 50px">Attenzione!
 		questa azione non può essere annullata</h1>
 	<h3 style="text-align: center; padding-top: 50px">Sei sicuro di
