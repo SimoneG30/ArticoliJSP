@@ -11,8 +11,6 @@
 </head>
 <body
 	style="background-color: lightblue; font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;">
-
-
 	<div class="container">
 		<div class="d-flex align-items-center justify-content-center"
 			style="margin-top: 50px">
@@ -21,24 +19,20 @@
 		</div>
 		<div class="d-flex align-items-center justify-content-center"
 			style="height: 350px">
-			<form>
-
+			<form action="SearchServlet" method="post">
 				<div class="mb-3">
-					<label for="descrizioneInput" class="form-label"><b>Descrizione</b></label>
-					<input type="text" class="form-control" id="descrizioneInput"
-						aria-describedby="descrizioneHelp">
+					<label for="marcaInput" class="form-label"><b>Marca</b></label>
+					<input type="text" name="marcaInput" class="form-control" id="marcaInput">
 				</div>
 				<div class="mb-3">
-					<label for="marcaInput" class="form-label"><b>Marca</b></label> <input
-						type="text" class="form-control" id="marcaInput">
+					<label for="modelloInput" class="form-label"><b>Modello</b></label> <input
+						type="text"  name="modelloInput" class="form-control" id="modelloInput">
 				</div>
-
-				<button type="submit" class="btn btn-primary">Cerca</button>
+				<input type="submit" class="btn btn-primary" value='Cerca'>
 			</form>
 		</div>
 	</div>
 	<!-- 	<a href="PreparaAggiuntaServlet">Nuovo articolo</a> -->
-
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 		crossorigin="anonymous"></script>

@@ -13,6 +13,12 @@ public class Articolo {
 
 	}
 
+	public Articolo(String marca, String modello) {
+		super();
+		this.marca = marca;
+		this.modello = modello;
+	}
+
 	public Articolo(Long idArticolo, String descrizione, String marca, String categoria, int prezzo, String modello) {
 		super();
 		this.idArticolo = idArticolo;
@@ -29,6 +35,16 @@ public class Articolo {
 		this.marca = marca;
 		this.categoria = categoria;
 		this.prezzo = prezzo;
+		this.modello = modello;
+	}
+	
+	
+
+	public Articolo(String descrizione, String marca, String categoria, String modello) {
+		super();
+		this.descrizione = descrizione;
+		this.marca = marca;
+		this.categoria = categoria;
 		this.modello = modello;
 	}
 
