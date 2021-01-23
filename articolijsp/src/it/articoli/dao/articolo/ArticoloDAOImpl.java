@@ -52,7 +52,7 @@ public class ArticoloDAOImpl implements ArticoloDAO {
 		for (Articolo articoloItem : DB_Mock.LISTA_ARTICOLI) {
 			if (articoloItem.getIdArticolo().equals(input.getIdArticolo()))
 				input.setIdArticolo(articoloItem.getIdArticolo());
-			articoloItem = input;
+				articoloItem = input;
 
 		}
 		return 1;
