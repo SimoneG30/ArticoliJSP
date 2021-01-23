@@ -19,11 +19,11 @@
 <div class="d-flex align-items-center justify-content-center" style="height: 350px"><form>
 
   <div class="mb-3">
-    <label for="descrizioneInput" class="form-label">Descrizione</label>
+    <label for="descrizioneInput" class="form-label"><b>Descrizione</b></label>
     <input type="text" class="form-control" id="descrizioneInput" aria-describedby="descrizioneHelp">
   </div>
   <div class="mb-3">
-    <label for="marcaInput" class="form-label">Marca</label>
+    <label for="marcaInput" class="form-label"><b>Marca</b></label>
     <input type="text" class="form-control" id="marcaInput">
   </div>
   
