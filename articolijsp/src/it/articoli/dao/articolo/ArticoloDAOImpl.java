@@ -20,7 +20,7 @@ public class ArticoloDAOImpl implements ArticoloDAO {
 		List<Articolo> result = new ArrayList<>();
 
 		for (Articolo articoloItem : DB_Mock.LISTA_ARTICOLI) {
-			if (articoloItem.getMarca().startsWith(marca) && articoloItem.getModello().startsWith(modello))
+			if (articoloItem.getMarca().toLowerCase().startsWith(marca.toLowerCase()) && articoloItem.getModello().toLowerCase().startsWith(modello.toLowerCase()))
 				result.add(articoloItem);
 		}
 		return result;
