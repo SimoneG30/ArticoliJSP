@@ -9,7 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import it.helloabitante.service.MyServiceFactory;
+import it.articoli.service.MyServiceFactory;
+
 
 @WebServlet("/VisualizzaDettaglioServlet")
 public class VisualizzaDettaglioServlet extends HttpServlet {
@@ -24,11 +25,11 @@ public class VisualizzaDettaglioServlet extends HttpServlet {
 		String destinazione = null;
 
 		try {
-			request.setAttribute("abitanteAttributeNameDettaglio", MyServiceFactory.getAbitanteServiceInstance().prendiUnoDaId(parametroIdDellAbitanteDiCuiVoglioIlDettaglio));
+			request.setAttribute("articoloSingoloAttribute", MyServiceFactory.getArticoloServiceInstance().prendiUnoDaId(parametroIdDellAbitanteDiCuiVoglioIlDettaglio));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		destinazione = "dettaglio.jsp";
+		destinazione = "dettaglioSingolo.jsp";
 		
 		RequestDispatcher rd = request.getRequestDispatcher(destinazione);
 		rd.forward(request, response);
